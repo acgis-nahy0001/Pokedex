@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffe8fa;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: cursive;
+    font-style: italic;
+    color: #4297ec;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: cursive;
+    color: #4297ec;
+
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: cursive;
+    color: #4297ec;
+
+  }
+
+  /* For the whole Gallery */
+  .pokedex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ensures a responsive grid */
+    gap: 15px;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .pokemon-item {
+    background: rgb(241, 239, 243);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .pokemon-item img {
+    width: 100px;
+    height: 100px;
+  }
+
+/* Center the card over the page */
+.pokemon-detail-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 225, 247);
+  width: 400px;
+  max-width: 90%;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Style the image */
+.pokemon-detail-card img {
+  width: 100%;
+  max-width: 250px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* Center heading and types/moves */
+.pokemon-detail-card h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.pokemon-detail-card p,
+.pokemon-detail-card ul {
+  margin-bottom: 1rem;
+}
+
+.pokemon-detail-card ul {
+  padding-left: 1rem;
+}
+
+/* For the type tag in the pokemon card. 
+Making it so it changes color according to the pokemon's type */
+.pokemon-type {
+  display: inline-block;
+  color: white;
+  margin: 0 4px;
+  padding: 4px 8px;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+/* Individual type colors */
+.normal   { background-color: #A8A878; }
+.fire     { background-color: #F08030; }
+.water    { background-color: #6890F0; }
+.electric { background-color: #F8D030; }
+.grass    { background-color: #78C850; }
+.ice      { background-color: #98D8D8; }
+.fighting { background-color: #C03028; }
+.poison   { background-color: #A040A0; }
+.ground   { background-color: #E0C068; }
+.flying   { background-color: #A890F0; }
+.psychic  { background-color: #d31951; }
+.fairy    {background-color: #F85888;}
+.ghost    {background-color: black;}
+
+/* Catch/Close buttons */
+.pokemon-detail-card button {
+  background-color: #bcc0bc;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.catch-btn {
+  background-color: rgb(255, 225, 247);
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.catch-btn:hover {
+  background-color: rgb(255, 225, 247);
+}
+
+.caught-message {
+  color: rgb(229, 27, 27);
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10px;
+  background-color: rgb(255, 225, 247);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.close-btn {
+  margin-top: 1rem;
+  background-color: #aeacacc0;
+}
+
+ul {
+  list-style-type: none;  
+  padding-left: 0;        
+  margin: 0;              
+}
